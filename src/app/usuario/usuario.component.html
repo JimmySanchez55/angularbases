@@ -1,0 +1,18 @@
+<p>Son datos del componente del usuario usuario </p>
+
+<section>            
+    @if(login)
+    {
+    <p>Bienvenido {{userName}}  </p> 
+        <img (click)="greet()"src="https://github.com/miguel.png" alt="photo">    
+     
+    } 
+
+    @else 
+        {
+            <p> Inicia Sesion </p>    
+            <button (click)="login=true"> Login   </button>
+
+        }
+        <app-game></app-game>
+    </section>

@@ -1,0 +1,11 @@
+<p> Contenido del componente game que se muestra en el app principal !</p>
+@for(game of games; track game.id)
+    {
+      <li> {{game.name}}</li>
+     }
+
+
+     <p>contador : {{counter}}</p>
+     <button (click)="incremento(1)">+1</button>
+     <button (click)="decremento(1)">-1</button>
+     <button (click)="reset()">reset</button>
