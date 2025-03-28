@@ -2,3 +2,8 @@
 @for(game of games; track game.id) {
 <li>{{ game.name }}</li>
 }
+
+<p>Contador : {{ counter }}</p>
+<button (click)="restar()">-1</button>
+<button (click)="sumar()">+1</button>
+<button (click)="reset()">reset</button>

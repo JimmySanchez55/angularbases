@@ -21,4 +21,18 @@ export class GameComponent {
       name: 'Carros',
     },
   ];
+
+  counter = 0;
+
+  restar() {
+    this.counter--;
+  }
+
+  sumar() {
+    this.counter++;
+  }
+
+  reset() {
+    this.counter = 0;
+  }
 }

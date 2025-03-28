@@ -1,18 +1,17 @@
-<p>Son datos del componente del usuario usuario </p>
+<p>Son datos del componente del usuario usuario</p>
 
-<section>            
-    @if(login)
-    {
-    <p>Bienvenido {{userName}}  </p> 
-        <img (click)="greet()"src="https://github.com/miguel.png" alt="photo">    
-     
-    } 
+<section>
+  @if(storageService.islogin()) {
+  <p>Bienvenido {{ userName }}</p>
+  <img (click)="greet()" src="https://github.com/miguel.png" alt="photo" />
+  <p>
+    <button (click)="storageService.removeItem()">Logout</button>
+  </p>
 
-    @else 
-        {
-            <p> Inicia Sesion </p>    
-            <button (click)="login=true"> Login   </button>
+  } @else {
+  <p>Inicia Sesion</p>
+  <button (click)="storageService.login()">Login</button>
 
-        }
-        <app-game></app-game>
-    </section>
+  }
+  <app-game></app-game>
+</section>
